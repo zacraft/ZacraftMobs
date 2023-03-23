@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zakaben.zacraftmod.entity.ModEntityTypes;
 import net.zakaben.zacraftmod.entity.client.CactusRenderer;
+import net.zakaben.zacraftmod.item.custom.ModItems;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -23,6 +24,8 @@ public class ZacraftMod {
 
     public ZacraftMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         ModEntityTypes.register(modEventBus);
 
