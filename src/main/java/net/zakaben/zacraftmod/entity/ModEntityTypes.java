@@ -17,7 +17,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<CactusEntity>> CACTUS =
             ENTITY_TYPES.register("cactus",
                     ()-> EntityType.Builder.of(CactusEntity::new, MobCategory.MONSTER)
-                            .sized(0.4f, 1.5f) //hitbox
+                            .sized(0.7f, 3.5f) //hitbox
                             .build(new ResourceLocation(ZacraftMod.MOD_ID, "cactus").toString()));
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

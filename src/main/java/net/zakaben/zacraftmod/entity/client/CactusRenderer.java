@@ -30,7 +30,7 @@ public class CactusRenderer extends GeoEntityRenderer<CactusEntity> {
                                     @Nullable VertexConsumer buffer, int packedLight,
                                     ResourceLocation texture) {
 
-        stack.scale(1f, 1f, 1f);
+        stack.scale(1.5f, 1.5f, 1.5f);
 
         return super.getRenderType(animatable, partialTick, stack, bufferSource, buffer, packedLight, texture);
     }

@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class CactusModel extends AnimatedGeoModel<CactusEntity>{
     @Override
-    public ResourceLocation getModelLocation(CactusEntity object) {
+    public ResourceLocation getModelResource(CactusEntity object) {
         return new ResourceLocation(ZacraftMod.MOD_ID, "geo/cactus.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureLocation(CactusEntity object) {
+    public ResourceLocation getTextureResource(CactusEntity object) {
         return new ResourceLocation(ZacraftMod.MOD_ID, "textures/entity/cactus.png");
     }
 
     @Override
-    public ResourceLocation getAnimationFileLocation(CactusEntity animatable) {
+    public ResourceLocation getAnimationResource(CactusEntity animatable) {
         return new ResourceLocation(ZacraftMod.MOD_ID, "animations/cactus.animation.json");
     }
 }
