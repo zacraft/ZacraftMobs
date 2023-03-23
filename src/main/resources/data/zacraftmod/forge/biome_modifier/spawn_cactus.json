@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#zacraftmod:cactus_biomes",
+  "spawners": {
+    "type": "zacraftmod:cactus",
+    "weight": 150,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}
