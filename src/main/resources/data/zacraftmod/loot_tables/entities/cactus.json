@@ -1,0 +1,32 @@
+{
+  "pools": [
+    {
+      "name": "cactus",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "zacraftmod:cactus_branch",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 0
+            }
+          ],
+          "weight": 70
+        }
+      ]
+    }
+  ]
+}

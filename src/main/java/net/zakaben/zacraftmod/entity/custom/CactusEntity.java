@@ -3,8 +3,13 @@ package net.zakaben.zacraftmod.entity.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -34,6 +39,8 @@ public class CactusEntity extends Monster implements IAnimatable {
 
         super(entityType, level);
     }
+
+    public boolean canSpawn
 
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
@@ -73,6 +80,27 @@ public class CactusEntity extends Monster implements IAnimatable {
             this.swinging = false;
         }
         return PlayState.CONTINUE;
+    }
+
+    public boolean doHurtTarget(Entity p_32257_) {
+        if (super.doHurtTarget(p_32257_)) {
+            if (p_32257_ instanceof LivingEntity) {
+                int i = 0;
+                if (this.level.getDifficulty() == Difficulty.NORMAL) {
+                    i = 7;
+                } else if (this.level.getDifficulty() == Difficulty.HARD) {
+                    i = 15;
+                }
+
+                if (i > 0) {
+                    ((LivingEntity)p_32257_).addEffect(new MobEffectInstance(MobEffects.POISON, i * 20, 0), this);
+                }
+            }
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

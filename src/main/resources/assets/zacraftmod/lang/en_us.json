@@ -1,5 +1,10 @@
 {
   "itemGroup.zacrafttab": "Zacraft",
 
-  "item.zacraftmod.cactus_spawn_egg" : "Cactus Spawn Egg"
+  "entity.zacraftmod.cactus": "Cactus",
+
+  "item.zacraftmod.cactus_spawn_egg" : "Cactus Spawn Egg",
+  "item.zacraftmod.cactus_branch" : "Cactus Branch",
+
+  "item.zacraftmod.cactus_sword": "Cactus Sword"
 }
