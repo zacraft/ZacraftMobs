@@ -8,7 +8,7 @@ public class ModCreativeModTab {
     public static final CreativeModeTab ZACRAFT_TAB = new CreativeModeTab("zacrafttab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.EMERALD);
+            return new ItemStack(ModItems.CACTUS_BRANCH.get());
         }
     };
 }

@@ -40,8 +40,6 @@ public class CactusEntity extends Monster implements IAnimatable {
         super(entityType, level);
     }
 
-    public boolean canSpawn
-
     public static AttributeSupplier setAttributes() {
         return Monster.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 20.0D)
@@ -96,6 +94,7 @@ public class CactusEntity extends Monster implements IAnimatable {
                     ((LivingEntity)p_32257_).addEffect(new MobEffectInstance(MobEffects.POISON, i * 20, 0), this);
                 }
             }
+
 
             return true;
         } else {
