@@ -27,5 +27,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.CACTUS, 0x49711d, 0xbcc294,
                     new Item.Properties().tab(ModCreativeModTab.ZACRAFT_TAB)));
 
+    public static final RegistryObject<Item> HOROR_SPAWN_EGG = ITEMS.register("horor_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.HOROR, 0x00000, 0xbcc294,
+                    new Item.Properties().tab(ModCreativeModTab.ZACRAFT_TAB)));
+
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus); }
 }

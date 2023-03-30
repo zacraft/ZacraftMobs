@@ -14,7 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zakaben.zacraftmod.entity.ModEntityTypes;
-import net.zakaben.zacraftmod.entity.client.CactusRenderer;
+import net.zakaben.zacraftmod.entity.client.render.CactusRenderer;
+import net.zakaben.zacraftmod.entity.client.render.HororRenderer;
 import net.zakaben.zacraftmod.item.ModItems;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -53,6 +54,8 @@ public class ZacraftMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             EntityRenderers.register(ModEntityTypes.CACTUS.get(), CactusRenderer::new);
+            EntityRenderers.register(ModEntityTypes.HOROR.get(), HororRenderer::new);
+
         }
     }
 }

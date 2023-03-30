@@ -1,4 +1,4 @@
-package net.zakaben.zacraftmod.entity.client;
+package net.zakaben.zacraftmod.entity.client.model;
 
 import net.minecraft.resources.ResourceLocation;
 import net.zakaben.zacraftmod.ZacraftMod;
@@ -13,7 +13,7 @@ public class CactusModel extends AnimatedGeoModel<CactusEntity>{
 
     @Override
     public ResourceLocation getTextureResource(CactusEntity object) {
-        return new ResourceLocation(ZacraftMod.MOD_ID, "textures/entity/cactus.png");
+        return new ResourceLocation(ZacraftMod.MOD_ID, "textures/entity/cactus/cactus.png");
     }
 
     @Override
