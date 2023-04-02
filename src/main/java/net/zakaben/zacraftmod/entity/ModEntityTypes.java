@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.zakaben.zacraftmod.ZacraftMod;
 import net.zakaben.zacraftmod.entity.custom.CactusEntity;
 import net.zakaben.zacraftmod.entity.custom.HororEntity;
+import net.zakaben.zacraftmod.entity.custom.MuchactusEntity;
 
 public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
@@ -26,6 +27,12 @@ public class ModEntityTypes {
                     ()-> EntityType.Builder.of(HororEntity::new, MobCategory.MONSTER)
                             .sized(2.5f, 4f) //hitbox
                             .build(new ResourceLocation(ZacraftMod.MOD_ID, "horor").toString()));
+
+    public static final RegistryObject<EntityType<MuchactusEntity>> MUCHACTUS =
+            ENTITY_TYPES.register("muchactus",
+                    ()-> EntityType.Builder.of(MuchactusEntity::new, MobCategory.MONSTER)
+                            .sized(0.5f, 1.5f) //hitbox
+                            .build(new ResourceLocation(ZacraftMod.MOD_ID, "muchactus").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

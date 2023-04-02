@@ -16,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.zakaben.zacraftmod.entity.ModEntityTypes;
 import net.zakaben.zacraftmod.entity.client.render.CactusRenderer;
 import net.zakaben.zacraftmod.entity.client.render.HororRenderer;
+import net.zakaben.zacraftmod.entity.client.render.MuchactusRenderer;
 import net.zakaben.zacraftmod.item.ModItems;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -55,7 +56,7 @@ public class ZacraftMod {
 
             EntityRenderers.register(ModEntityTypes.CACTUS.get(), CactusRenderer::new);
             EntityRenderers.register(ModEntityTypes.HOROR.get(), HororRenderer::new);
-
+            EntityRenderers.register(ModEntityTypes.MUCHACTUS.get(), MuchactusRenderer::new);
         }
     }
 }

@@ -31,5 +31,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.HOROR, 0x00000, 0xbcc294,
                     new Item.Properties().tab(ModCreativeModTab.ZACRAFT_TAB)));
 
+    public static final RegistryObject<Item> MUCHACTUS_SPAWN_EGG = ITEMS.register("muchactus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.MUCHACTUS, 0x49711d, 0xbcc294,
+                    new Item.Properties().tab(ModCreativeModTab.ZACRAFT_TAB)));
+
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus); }
 }
